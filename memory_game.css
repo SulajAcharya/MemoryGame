@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 10px;
+    color: white;
+}
+
+h1 {
+    margin: 0px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(11, 100px);
+    gap: 10px;
+}
+
+.card {
+    width: 100px;
+    height: 125px;
+    perspective: 1000px;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.4s;
+    cursor: pointer;
+}
+
+.card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
+
+.card-front {
+    background-color: rgb(63, 27, 140);
+}
+
+.card-back {
+    background-size: cover;
+    background-position: center;
+    transform: rotateY(180deg);
+}
+
+main {
+    text-align: center;
+}
+
+select,
+button {
+    margin: 10px;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+button {
+    cursor: pointer;
+    background-color: #6a1b9a;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #9c4dcc;
+}
+
+#winMessage {
+    font-size: 24px;
+    color: #4caf50;
+    margin-top: 10px;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Match</title>
+    <link rel="stylesheet" href="memory_game.css">
+</head>
+<body>
+    <header>
+        <div>Flips: <span id="flipCounter">0</span></div>
+        <div>Least Flips: <span id="leastFlips">N/A</span></div>
+        <div>Matches Found: <span id="matchCounter">0</span></div>
+    </header>
+    
+    <main>
+        <h1>Memory Match</h1>
+        <div>
+            <select id="topicSelector">
+                <option value="random">Random</option>
+                <option value="animals">Animals</option>
+                <option value="birds">Birds</option>
+                <option value="dragons">Dragons</option>
+                <option value="fruits">Fruits</option>
+                <option value="flowers">Flowers</option>
+                <option value="aquatic">Aquatic</option>
+            </select>
+            <button id="startButton">Start Game</button>
+        </div>
+        <div id="grid" class="grid"></div>
+        <div id="winMessage"></div>
+    </main>
+
+    <script src="memory_game.js"></script>
+</body>
+</html>
